@@ -1,20 +1,24 @@
 package DS.Recursion;
 
-class Main {
+
+class SumOfDigits {
     public static void main(String[] args) {
-        Main recursion = new Main();
-        var rec = recursion.factorial(-2);
+        SumOfDigits sumOfDigits = new SumOfDigits();
+        var rec = sumOfDigits.sumOfDigits(-132);
         System.out.println(rec);
     }
 
-    public int factorial(int n) {
-        if (n<1) {
-            return -1;
+    public int sumOfDigits(int n) {
+
+        int digit =0;
+
+        if (n>-9 && n<10) {
+           return n;
+
         }
-        if (n==0 || n==1) {
-            return 1;
-        }
-        return n * factorial(n-1);
+        digit = n%10;
+        n = n/10;
+        return digit + sumOfDigits(n);
     }
 
 

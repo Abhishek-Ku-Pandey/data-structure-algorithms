@@ -2,8 +2,8 @@ package DS.Recursion;
 
 class Factorial {
     public static void main(String[] args) {
-        Main recursion = new Main();
-        var rec = recursion.factorial(5);
+        Factorial recursion = new Factorial();
+        var rec = recursion.factorial(-2);
         System.out.println(rec);
     }
 
